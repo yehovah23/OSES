@@ -1,0 +1,24 @@
+# Python bytecode and virtual environment
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Database
+db.sqlite3
+
+# Media and static files (if you serve them locally)
+/media
+/static_collected
+
+# IDE specific files
+.vscode/
+.idea/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Ignore requirements.txt inside the app directory (if it exists and is not desired)
+census/requirements.txt
