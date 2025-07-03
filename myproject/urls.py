@@ -15,14 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from census.views import home, signup_view, login_view  # Import from census app instead
 
 urlpatterns = [
+    path('census/', include('census.urls')),
     path('admin/', admin.site.urls),
-    # This line correctly includes all URLs defined in your census/urls.py
-    # including the 'signup/' path.
-    path('', include('census.urls')), # Changed from 'api/' to '' to ensure root URL is handled by census.urls
-    # Removed: path('signup/', include('census.signup')), as it's redundant and incorrect.
-    # If you have DRF authentication URLs, they should be included like this:
-    path('api-auth/', include('rest_framework.urls')),
+    path('', home, name='home'),
+    path('signup/', signup_view, name='signup'),
+    path('login/', login_view, name='login'),
 ]
