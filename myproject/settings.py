@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-am&i07#g%oc_471##@&@bpj39!lxp1k=)yq-5gj^ft0lg%dna*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1',             # For local development
     'localhost',             # For local development
     'oses-census-app-1.onrender.com', # Your specific Render domain
-    '.onrender.com']
+    '.onrender.com','.vercel.app']
 
 
 # Application definition
@@ -150,6 +150,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
