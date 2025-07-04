@@ -30,7 +30,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1',             # For local development
     'localhost',             # For local development
     'oses-census-app-1.onrender.com', # Your specific Render domain
-    '.onrender.com','.vercel.app','84.235.243.75',]
+    '.onrender.com','.vercel.app','84.235.243.75','.now.sh']
 
 
 # Application definition
